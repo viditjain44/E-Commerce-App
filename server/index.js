@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
  import morgan from 'morgan';
  import helmet from 'helmet';
+ import connectdb from './config/connectdb.js';
  dotenv.config();
  const server = express();
  server.use(cors({
@@ -17,7 +18,7 @@ import cookieParser from 'cookie-parser';
     contentSecurityPolicy: false
 
  }))
- 
+ connectdb();
  const PORT= process.env.PORT||8080
  server.get('/',(req,res)=>
 {
