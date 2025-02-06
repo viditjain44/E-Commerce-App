@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser';
  import morgan from 'morgan';
  import helmet from 'helmet';
  import connectdb from './config/connectdb.js';
+import userRouter from './Routes/user.route.js';
  dotenv.config();
  const server = express();
  server.use(cors({
@@ -33,3 +34,4 @@ server.listen(PORT,()=>
 {
     console.log("server is running",PORT);
 })
+server.use('/api/user',userRouter)

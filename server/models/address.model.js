@@ -32,6 +32,10 @@ const  addressschema =  new mongoose.Schema(
             default:""
              
         },
+        status :{
+            type :Boolean,
+            default : true
+        }
 
 
     }

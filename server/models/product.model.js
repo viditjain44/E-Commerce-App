@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
- const productschema = mongoose.Schema({
+ const productschema =  new mongoose.Schema({
     name  : {
         type : String , 
         default : []
@@ -15,7 +15,7 @@ import mongoose from "mongoose";
    sub_category:
    [
     { type : mongoose.Schema.ObjectId,
-        ref : 'sub-category'
+        ref : 'subcategory'
 
 
     }

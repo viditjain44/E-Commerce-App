@@ -1,4 +1,4 @@
-import { verify } from "jsonwebtoken";
+
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
@@ -6,6 +6,7 @@ const userSchema = new mongoose.Schema({
  {
     type : String,
     required : [true,"Provide name"]
+   
 
  },
  email :{
@@ -49,7 +50,7 @@ status : {
 address_details : [
 {
     type :mongoose.Schema.ObjectId,
-    ref : 'address'
+    ref :'address'
 
 }],
 shopping_cart : [
